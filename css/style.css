@@ -56,23 +56,76 @@ body {
 .startup{
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
 .startup .background {
     display: flex;
-    background-image:url(/weatherWebApp/css/img/startupbg.jpg);
+    background-image: url(/css/img/startupbg.jpg);
     height: 100%;
     width: 100%;
     background-size: cover;
     justify-content: center;
+    z-index: 2;
 }
-h2 {
+.background .slogan {
 position: absolute;
 top: 5%;
-z-index: 2;
+z-index: 3;
 color: #ffffff;
 text-transform: uppercase;
 font-size: 24px;
 line-height: 36px;
 font-family: 'Source Sans 3', sans-serif;
+}
+
+.startup .login {
+transform: translate(-20%,20%);
+}
+.startup .login form{
+position: relative;
+    z-index: 4;
+    left: 5%;
+    top: 10%;
+}
+::placeholder {
+    padding-left: 15px;
+}
+
+form input{
+    width: 400px;
+    height: 46px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.startup .login::before {
+    content: " ";
+    position: absolute;
+    background-color: #161616;
+    height: 421px;
+    width: 463px;
+    transform: translateY(-20px);
+    z-index: 3;
+    border-radius: 15px;
+}
+.startup .login::after {
+    content: " ";
+    position: absolute;
+    background-color: #C6C824;
+    top: 0;
+    left: 3%;
+    height: 431px;
+    width: 463px;
+    transform: translateY(-20px);
+    z-index: 2;
+    border-radius: 15px;
+}
+.login h2 {
+    position: relative;
+    color: #ffffff;
+    z-index: 3;
+    top: 5%;
+    left: 10%;
+    line-height: 50px;
+    font-size: 36px;
 }
