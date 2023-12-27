@@ -89,7 +89,7 @@ position: relative;
     top: 10%;
 }
 ::placeholder {
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 form input{
@@ -97,6 +97,18 @@ form input{
     height: 46px;
     border-radius: 20px;
     margin-top: 15px;
+    border: none;
+    background-color: #303030;
+    padding-left: 22px;
+    color: #828282;
+}
+form input:focus {
+    outline: none;
+}
+form input[type="submit"] {
+    cursor: pointer;
+    background-color: #C6C824;
+    color: #ffffff;
 }
 .startup .login::before {
     content: " ";
